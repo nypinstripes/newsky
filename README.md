@@ -201,7 +201,7 @@ _Snapshots are generated using the jest testing library, at present there are on
 ### Newsky Search
 
 <p align="center">
-  <img width="100%" valign="top" src="https://cl.ly/33963e12d396/newsky-preview.gif" alt="preview" />
+  <img width="100%" valign="top" src="https://cl.ly/8c7b20c39803/newsky-preview-2.gif" alt="preview" />
 </p>
 
 <br />
@@ -231,7 +231,7 @@ _Snapshots are generated using the jest testing library, at present there are on
 
 #### Search Results
 
-<h4><strong>Note:</strong> Searches submit as you type, there's a 6 second debounce delay as not to make too many network requests.</h4>
+<strong>Note:</strong> Searches submit as you type, there's a 6 second debounce delay as not to make too many network requests.
 
 <br />
 
