@@ -1,0 +1,58 @@
+{
+  "browsers": [
+    {
+      "agents": ["chrome"],
+      "fallback": true,
+      "name": "Google Chrome",
+      "url": "https://www.google.com/intl/en/chrome/"
+    },
+    {
+      "agents": ["edge"],
+      "fallback": true,
+      "name": "Microsoft Edge",
+      "url": "https://www.microsoft.com/en-us/windows/microsoft-edge"
+    },
+    {
+      "agents": ["firefox"],
+      "fallback": true,
+      "name": "Mozilla Firefox",
+      "url": "https://www.mozilla.org/en-US/firefox/new/"
+    },
+    {
+      "agents": ["gsa"],
+      "fallback": false,
+      "name": "Google Search App"
+    },
+    {
+      "agents": ["instagram"],
+      "fallback": false,
+      "name": "Instagram"
+    },
+    {
+      "agents": ["opera", "mini/mobi/tablet"],
+      "fallback": true,
+      "name": "Opera",
+      "url": "https://www.opera.com"
+    },
+    {
+      "agents": ["mobile", "safari"],
+      "fallback": true,
+      "name": "Apple Safari",
+      "url": "https://www.apple.com/safari/"
+    }
+  ],
+  "social": [
+    {
+      "agents": ["FBAN", "FBAV"],
+      "name": "facebook"
+    },
+    {
+      "agents": ["Instagram"],
+      "name": "instagram"
+    },
+    {
+      "agents": ["Twitter"],
+      "name": "twitter"
+    }
+  ]
+}

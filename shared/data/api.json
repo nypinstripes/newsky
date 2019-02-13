@@ -1,0 +1,8 @@
+{
+  "dev": {
+    "news": {
+      "API_KEY": "bb6f5f759c4f45edae974f6becf80358",
+      "API_URL": "https://newsapi.org/v2/everything"
+    }
+  }
+}

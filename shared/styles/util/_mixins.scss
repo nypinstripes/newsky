@@ -1,0 +1,501 @@
+// Active Text
+//
+// Showing an active/selected state of link/nav text.
+
+@mixin active-text($color: black) {
+  color: $color;
+  cursor: default;
+  &::before {
+    background-color: argb();
+  }
+}
+
+// Animations (reset)
+//
+// Useful for drying keyframe animations to their
+// defaults, specifically vendor prefixed properties.
+//
+// Usage:
+// @include animations({ use named params });
+
+@mixin animations(
+  $count: 1,
+  $delay: 0s,
+  $direction: normal,
+  $duration: 200ms,
+  $fill: forwards,
+  $name: none,
+  $play: running,
+  $timing: ease-out
+) {
+  animation-delay: $delay;
+  animation-direction: $direction;
+  animation-duration: $duration;
+  animation-fill-mode: $fill;
+  animation-iteration-count: $count;
+  animation-name: $name;
+  animation-play-state: $play;
+  animation-timing-function: $timing;
+}
+
+// Backgrounds (reset)
+//
+// Useful for normalizing any elements that require single image
+// backgrounds. Include this at the bottom of your rules block.
+//
+// Usage:
+// @include backgrounds;
+
+@mixin backgrounds(
+  $attachment: scroll,
+  $clip: border-box,
+  $color: argb(),
+  $image: none,
+  $origin: border-box,
+  $repeat: no-repeat,
+  $size: auto,
+  $xPos: center,
+  $yPos: center
+) {
+  background-attachment: $attachment;
+  background-clip: $clip;
+  background-color: $color;
+  background-image: $image;
+  background-origin: $origin;
+  background-position: $xPos $yPos;
+  background-repeat: $repeat;
+  background-size: $size;
+}
+
+// Center X & Y, CenterXY
+//
+// Easy vertical & horizontal centering.
+
+@mixin center-x($position: relative, $display: inline-block) {
+  clear: both;
+  display: $display;
+  float: left;
+  text-align: center;
+  transform: translateX(-50%);
+  @include position($position, null null null 50%);
+}
+
+@mixin center-y($position: relative) {
+  transform: translateY(-50%);
+  @include float-box;
+  @include position($position, 50% null null null);
+}
+
+@mixin center-xy($position: relative) {
+  text-align: center;
+  transform: translate(-50%, -50%);
+  @include float-box;
+  @include position($position, 50% null null 50%);
+}
+
+// Caret
+//
+// For layering two triangles atop one another.
+
+@mixin caret($hyp, $widthOut, $outColor, $inColor) {
+  &::before, &::after {
+    border-color: argb();
+    border-style: solid;
+    border-width: #{$widthOut};
+    content: '';
+    overflow: hidden;
+    position: absolute;
+    transition: border-color 200ms ease-out 0s;
+    @include size(0);
+  }
+  &::before {
+    border-#{$hyp}-color: #{$outColor};
+    z-index: 2;
+  }
+  &::after {
+    border-#{$hyp}-color: #{$inColor};
+    z-index: 3;
+  }
+}
+
+// Circle
+//
+// Allows creation of circles for use in creating
+// non-rectangular shapes with CSS geometry!
+//
+// Usage:
+// @include circle(5, red);
+
+@mixin circle($cR, $color: argb(), $units: px) {
+  background-color: $color;
+  border-radius: #{$cR}#{$units};
+  @include size(#{$cR * 2}#{$units});
+}
+
+// Clear Button
+//
+// A two piece close button with transitionable box properties.
+
+@mixin clear-button(
+  $activeColor: red,
+  $buttonHeight: 44px,
+  $buttonWidth: 44px,
+  $crossColor: white,
+  $crossSize: 22px
+) {
+  height: $buttonHeight;
+  outline: 0;
+  position: absolute;
+  width: $buttonWidth;
+  z-index: 30;
+  @include float-box;
+  &:hover {
+    [class*='-clear-cross'] {
+      &::before, &::after {
+        @include breakpoint($medium) {
+          background-color: $activeColor;
+        }
+      }
+    }
+  }
+  &:focus, &:active {
+    box-shadow: 0 0 0 0 argb();
+    outline: 0;
+    [class*='-clear-cross'] {
+      &::before, &::after {
+        background-color: $activeColor;
+      }
+    }
+  }
+  &-cross {
+    backface-visibility: hidden;
+    background-color: argb();
+    box-shadow: 0 0 0 0 argb();
+    border: edge($size: 0);
+    cursor: pointer;
+    clear: both;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: 0 0;
+    z-index: 2;
+    @include animations($delay: -50ms, $duration: 300ms, $name: explode);
+    @include float-box;
+    @include position(50% null null 50%);
+    @include transitions($property: #{opacity, transform}, $timing: ease);
+    @include size($crossSize);
+    &::before, &::after {
+      backface-visibility: hidden;
+      background-color: $crossColor;
+      content: '';
+      transition: background-color 100ms linear 0s;
+      @include position(absolute, 50% null null 0);
+      @include size($crossSize 1px);
+    }
+    &::before {
+      transform: rotate(45deg);
+      z-index: 3;
+    }
+    &::after {
+      transform: rotate(-45deg);
+      z-index: 4;
+    }
+  }
+}
+
+// CSS3 Filters
+//
+// Apply effects like (Gausian) blur, contrast, greyscale etc.
+//
+// Usage:
+// @include filter(blur(15px));
+//
+// More info: https://css-tricks.com/almanac/properties/f/filter/
+
+@mixin filter($filter) {
+  @include prefixer(filter, $filter, $experimental-support);
+}
+
+// Float Box
+
+@mixin float-box($direction: left) {
+  display: inline-block;
+  float: $direction;
+}
+
+// Float Row
+
+@mixin float-row {
+  clear: both;
+  float: left;
+  width: 100%;
+}
+
+// Font Mass
+
+@mixin font-mass($size: 1rem, $lineHeight: 1rem, $weight: 400) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+}
+
+// Hard Hide & Show
+//
+// Forceably hide or show an element by changing
+// its opacity, visibility & display properties.
+
+@mixin hard-hide {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin hard-show {
+  display: inline-block;
+  opacity: 1;
+  visibility: visible;
+}
+
+// Horizontal Separator
+//
+// For little bars dividing sections with color.
+
+@mixin hz-separator($bottom: 0, $color: black, $width: 100%) {
+  &::before {
+    background-color: $color;
+    bottom: $bottom;
+    content: '';
+    transform: translateX(-50%);
+    @include position(absolute, auto null null 50%);
+    @include size($width 1px);
+  }
+}
+
+// Horizontal Underline
+//
+// For little bars underlining text with color.
+
+@mixin hz-underline($color: black, $override: argb()) {
+  &:hover {
+    &::before {
+      @include breakpoint($large) {
+        background-color: $color;
+      }
+    }
+  }
+  &:focus, &:active {
+    &::before {
+      background-color: $color;
+    }
+  }
+  &::before {
+    background-color: $override;
+    content: '';
+    transition: background-color 150ms ease 0s;
+    @include position(absolute, null 0 -1px 0);
+    @include size(100% 1px);
+  }
+}
+
+// Interactions
+//
+// Aid the declaration of pseudo class states for interactive objects.
+
+// @mixin interactions() {
+//   &:hover {
+//     @include breakpoint($large) {}
+//   }
+//   &:focus, &:active {}
+// }
+
+// More Dots
+//
+// Creates a button with centered ellipsis, reuires one inner element <span />.
+
+@mixin more-dots(
+  $height: 100%,
+  $minHeight: auto,
+  $position: relative,
+  $width: 30px,
+) {
+  background-color: argb();
+  min-height: $minHeight;
+  padding: 0;
+  position: $position;
+  @include float-box;
+  @include size($width $height);
+  > span {
+    outline: 0;
+    position: relative;
+    z-index: 2;
+    @include float-box;
+    @include size(100%);
+    > span {
+      z-index: 10;
+      @include center-xy(absolute);
+      @include circle(1, black);
+      &::before, &::after {
+        content: '';
+        @include center-xy(absolute);
+        @include circle(1, black);
+      }
+      &::before {
+        margin-left: -5px;
+      }
+      &::after {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+// Moz Placeholder
+//
+// Mozilla Firefox uses a different line-height setting for aligning input
+// placeholders, though the bourbon placeholder mixin does address this
+// it does so only partially and must be overridden separately on occasion.
+
+@mixin moz-placeholder($lineHeight) {
+  &:-moz-placeholder, &::-moz-placeholder {
+    line-height: $lineHeight;
+  }
+}
+
+// No Spacing
+//
+// Resets an elements margin & padding.
+
+@mixin no-spacing {
+  margin: 0;
+  padding: 0;
+}
+
+// Plus Sign
+//
+// Pure css plus sign.
+
+@mixin plus-sign($weight, $size, $color: black, $position: relative) {
+  @include center-xy($position);
+  @include size($size);
+  &::before, &::after {
+    background-color: $color;
+    content: '';
+    transition: all 200ms linear 0s;
+    @include center-xy(absolute);
+    @include size(100% $weight);
+  }
+  &::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}
+
+// Rotator
+//
+// Rotate elements clockwise
+// Allows degree map to be passed in
+//
+// Usage
+// $map: (left: 90deg, top: 180deg, right: 270deg);
+// @include rotator(left, $map)
+// (this is good for semantic class names)
+//
+// ...or simply:
+// @include rotator(90deg);
+
+@mixin rotator($directionOrDegree, $map: null) {
+  @if $map {
+    @if map-has-key($map, $directionOrDegree) {
+      @include transform(rotate(map-get($map, $directionOrDegree)));
+    }
+  } @else {
+    @include transform(rotate($directionOrDegree));
+  }
+}
+
+// Soft Show/Hide
+//
+// Allow elements to have their visibility
+// toggled without changing display values.
+
+@mixin soft-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin soft-hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+// Text Input Placeholder
+
+@mixin text-input-placeholder {
+  @each $placeholder in $placeholder-prefixes {
+    &:#{$placeholder}-placeholder {
+      @content;
+    }
+  }
+}
+
+// Textarea Placeholder
+//
+// Usage:
+// @include textarea-placeholder(black, 1.15rem);
+
+@mixin textarea-placeholder(
+  $color: grey,
+  $fontSize: 1rem,
+  $fontStyle: italic,
+  $fontWeight: 400,
+  $lineHeight: 1rem
+) {
+  @each $prefix in $placeholder-prefixes {
+    &:#{$prefix}-placeholder {
+      color: $color;
+      font-style: $fontStyle;
+      @include font-mass($fontSize, $lineHeight, $fontWeight);
+    }
+  }
+}
+
+// Tinify
+//
+// Make something extremely tiny.
+
+@mixin tinify {
+  border-width: 0;
+  display: inline-block;
+  outline: 0;
+  transform: scale(0.01);
+  @include no-spacing;
+  @include position(absolute, 0 null null 0);
+  @include size(1px);
+}
+
+// transform: 2D Transforms (Bourbon Override)
+//
+// 2D Transforms are now supported unprefixed, universally except in mobile
+// safari 8. This overrides bourbon's default prefixes for these properties.
+
+@mixin transform($property: none) {
+  @include prefixer(transform, $property, $webkit-support);
+}
+
+// Transitions (reset)
+//
+// Useful for drying keyframe animations to their
+// defaults, specifically vendor prefixed properties.
+//
+// Usage:
+// @include transitions({ use named params });
+
+@mixin transitions(
+  $delay: 0s,
+  $duration: 200ms,
+  $property: none,
+  $timing: ease-in
+) {
+  transition-delay: $delay;
+  transition-duration: $duration;
+  transition-property: $property;
+  transition-timing-function: $timing;
+}

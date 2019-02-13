@@ -1,0 +1,61 @@
+{
+  "appPadding": {
+    "x": {
+      "base": 14,
+      "large": 46
+    },
+    "y": {
+      "base": 20,
+      "large": 36
+    }
+  },
+  "clickTargetSize": {
+    "default": 44,
+    "base": 34,
+    "large": 39
+  },
+  "fullWidth": 100,
+  "halfWidth": 50,
+  "header": {
+    "base": 50,
+    "large": 64
+  },
+  "item": {
+    "descriptionHeight": 72,
+    "height": 537,
+    "reveal": 75,
+    "spacing": 17,
+    "width": 460
+  },
+  "keys": {
+    "enter": 32,
+    "space": 13
+  },
+  "search": {
+    "inputOffset": {
+      "base": 176,
+      "large": 316
+    }
+  },
+  "size": {
+    "full": 100,
+    "half": 50
+  },
+  "textHeight": 16,
+  "viewport": {
+    "base": 400,
+    "large": 1024,
+    "medium": 768,
+    "small": 640,
+    "xLarge": 1280,
+    "xSmall": 450,
+    "xxLarge": 1400,
+    "xxxLarge": 1800,
+    "xxxxLarge": 2000,
+    "xxxxxLarge": 3000
+  },
+  "well": {
+    "base": 100,
+    "large": 91.5
+  }
+}

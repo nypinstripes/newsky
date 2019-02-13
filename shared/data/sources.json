@@ -1,0 +1,556 @@
+{
+  "sources": [
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://abcnews.go.com&size=70..120..200",
+      "name": "ABC News"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.abc.net.au/news&size=70..120..200",
+      "name": "ABC News (AU)"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.aftenposten.no&size=70..120..200",
+      "name": "Aftenposten"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.aljazeera.com&size=70..120..200",
+      "name": "Al Jazeera English"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.ansa.it&size=70..120..200",
+      "name": "ANSA.it"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.argaam.com&size=70..120..200",
+      "name": "Argaam"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://arstechnica.com&size=70..120..200",
+      "name": "Ars Technica"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://arynews.tv/ud/&size=70..120..200",
+      "name": "Ary News"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://apnews.com/&size=70..120..200",
+      "name": "Associated Press"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.afr.com&size=70..120..200",
+      "name": "Australian Financial Review"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.axios.com&size=70..120..200",
+      "name": "Axios"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.bbc.co.uk/news&size=70..120..200",
+      "name": "BBC News"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.bbc.co.uk/sport&size=70..120..200",
+      "name": "BBC Sport"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.bild.de&size=70..120..200",
+      "name": "Bild"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://br.blastingnews.com&size=70..120..200",
+      "name": "Blasting News (BR)"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.bleacherreport.com&size=70..120..200",
+      "name": "Bleacher Report"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.bloomberg.com&size=70..120..200",
+      "name": "Bloomberg"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.breitbart.com&size=70..120..200",
+      "name": "Breitbart News"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.businessinsider.com&size=70..120..200",
+      "name": "Business Insider"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://uk.businessinsider.com&size=70..120..200",
+      "name": "Business Insider (UK)"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.buzzfeed.com&size=70..120..200",
+      "name": "Buzzfeed"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.cbc.ca/news&size=70..120..200",
+      "name": "CBC News"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.cbsnews.com&size=70..120..200",
+      "name": "CBS News"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.cnbc.com&size=70..120..200",
+      "name": "CNBC"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://us.cnn.com&size=70..120..200",
+      "name": "CNN"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://cnnespanol.cnn.com/&size=70..120..200",
+      "name": "CNN Spanish"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.ccn.com&size=70..120..200",
+      "name": "Crypto Coins News"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http:/…dailymail.co.uk/home/index.html&size=70..120..200",
+      "name": "Daily Mail"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.tagesspiegel.de&size=70..120..200",
+      "name": "Der Tagesspiegel"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.zeit.de/index&size=70..120..200",
+      "name": "Die Zeit"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.elmundo.es&size=70..120..200",
+      "name": "El Mundo"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.engadget.com&size=70..120..200",
+      "name": "Engadget"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.ew.com&size=70..120..200",
+      "name": "Entertainment Weekly"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://espn.go.com&size=70..120..200",
+      "name": "ESPN"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.espncricinfo.com/&size=70..120..200",
+      "name": "ESPN Cric Info"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://business.financialpost.com&size=70..120..200",
+      "name": "Financial Post"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.ft.com/home/uk&size=70..120..200",
+      "name": "Financial Times"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.focus.de&size=70..120..200",
+      "name": "Focus"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.football-italia.net&size=70..120..200",
+      "name": "Football Italia"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://fortune.com&size=70..120..200",
+      "name": "Fortune"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.fourfourtwo.com/news&size=70..120..200",
+      "name": "FourFourTwo"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.foxnews.com&size=70..120..200",
+      "name": "Fox News"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.foxsports.com&size=70..120..200",
+      "name": "Fox Sports"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.globo.com/&size=70..120..200",
+      "name": "Globo"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://news.google.com&size=70..120..200",
+      "name": "Google News"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://news.google.com&size=70..120..200",
+      "name": "Google News (Argentina)"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://news.google.com&size=70..120..200",
+      "name": "Google News (Australia)"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://news.google.com&size=70..120..200",
+      "name": "Google News (Brasil)"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://news.google.com&size=70..120..200",
+      "name": "Google News (Canada)"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://news.google.com&size=70..120..200",
+      "name": "Google News (France)"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://news.google.com&size=70..120..200",
+      "name": "Google News (India)"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://news.google.com&size=70..120..200",
+      "name": "Google News (Israel)"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://news.google.com&size=70..120..200",
+      "name": "Google News (Italy)"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://news.google.com&size=70..120..200",
+      "name": "Google News (Russia)"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://news.google.com&size=70..120..200",
+      "name": "Google News (Saudi Arabia)"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://news.google.com&size=70..120..200",
+      "name": "Google News (UK)"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.gp.se&size=70..120..200",
+      "name": "Göteborgs-Posten"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.gruenderszene.de&size=70..120..200",
+      "name": "Gruenderszene"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://news.ycombinator.com&size=70..120..200",
+      "name": "Hacker News"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.handelsblatt.com&size=70..120..200",
+      "name": "Handelsblatt"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.ign.com&size=70..120..200",
+      "name": "IGN"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.ilsole24ore.com&size=70..120..200",
+      "name": "Il Sole 24 Ore"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.independent.co.uk&size=70..120..200",
+      "name": "Independent"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.infobae.com/?noredirect&size=70..120..200",
+      "name": "Infobae"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.infomoney.com.br&size=70..120..200",
+      "name": "InfoMoney"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.lagaceta.com.ar&size=70..120..200",
+      "name": "La Gaceta"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.lanacion.com.ar&size=70..120..200",
+      "name": "La Nacion"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.repubblica.it&size=70..120..200",
+      "name": "La Repubblica"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.lemonde.fr&size=70..120..200",
+      "name": "Le Monde"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://lenta.ru&size=70..120..200",
+      "name": "Lenta"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.lequipe.fr&size=70..120..200",
+      "name": "L'equipe"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.lesechos.fr&size=70..120..200",
+      "name": "Les Echos"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.liberation.fr&size=70..120..200",
+      "name": "Libération"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.marca.com&size=70..120..200",
+      "name": "Marca"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://mashable.com&size=70..120..200",
+      "name": "Mashable"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.medicalnewstoday.com&size=70..120..200",
+      "name": "Medical News Today"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://metro.co.uk&size=70..120..200",
+      "name": "Metro"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.mirror.co.uk/&size=70..120..200",
+      "name": "Mirror"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.msnbc.com&size=70..120..200",
+      "name": "MSNBC"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.mtv.com/news&size=70..120..200",
+      "name": "MTV News"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.mtv.co.uk/news&size=70..120..200",
+      "name": "MTV News (UK)"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://news.nationalgeographic.com&size=70..120..200",
+      "name": "National Geographic"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.nationalreview.com/&size=70..120..200",
+      "name": "National Review"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.nbcnews.com&size=70..120..200",
+      "name": "NBC News"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.news24.com&size=70..120..200",
+      "name": "News24"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https:…w.newscientist.com/section/news&size=70..120..200",
+      "name": "New Scientist"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.news.com.au&size=70..120..200",
+      "name": "News.com.au"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.newsweek.com&size=70..120..200",
+      "name": "Newsweek"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://nymag.com&size=70..120..200",
+      "name": "New York Magazine"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.nextbigfuture.com&size=70..120..200",
+      "name": "Next Big Future"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.nfl.com/news&size=70..120..200",
+      "name": "NFL News"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.nhl.com/news&size=70..120..200",
+      "name": "NHL News"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.nrk.no&size=70..120..200",
+      "name": "NRK"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.politico.com&size=70..120..200",
+      "name": "Politico"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.polygon.com&size=70..120..200",
+      "name": "Polygon"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.rbc.ru&size=70..120..200",
+      "name": "RBC"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.recode.net&size=70..120..200",
+      "name": "Recode"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.reddit.com/r/all&size=70..120..200",
+      "name": "Reddit /r/all"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.reuters.com&size=70..120..200",
+      "name": "Reuters"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://russian.rt.com&size=70..120..200",
+      "name": "RT"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.rte.ie/news&size=70..120..200",
+      "name": "RTE"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.rtlnieuws.nl/&size=70..120..200",
+      "name": "RTL Nieuws"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://sabq.org&size=70..120..200",
+      "name": "SABQ"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.spiegel.de&size=70..120..200",
+      "name": "Spiegel Online"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.svd.se&size=70..120..200",
+      "name": "Svenska Dagbladet"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://t3n.de&size=70..120..200",
+      "name": "T3n"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://talksport.com&size=70..120..200",
+      "name": "TalkSport"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://techcrunch.com&size=70..120..200",
+      "name": "TechCrunch"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://techcrunch.cn&size=70..120..200",
+      "name": "TechCrunch (CN)"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.techradar.com&size=70..120..200",
+      "name": "TechRadar"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http:/…ww.theamericanconservative.com/&size=70..120..200",
+      "name": "The American Conservative"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.economist.com&size=70..120..200",
+      "name": "The Economist"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.theglobeandmail.com&size=70..120..200",
+      "name": "The Globe And Mail"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.theguardian.com/au&size=70..120..200",
+      "name": "The Guardian (AU)"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.theguardian.com/uk&size=70..120..200",
+      "name": "The Guardian (UK)"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://thehill.com&size=70..120..200",
+      "name": "The Hill"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.thehindu.com&size=70..120..200",
+      "name": "The Hindu"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.huffingtonpost.com&size=70..120..200",
+      "name": "The Huffington Post"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.irishtimes.com&size=70..120..200",
+      "name": "The Irish Times"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.jpost.com/&size=70..120..200",
+      "name": "The Jerusalem Post"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.theladbible.com&size=70..120..200",
+      "name": "The Lad Bible"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.nytimes.com&size=70..120..200",
+      "name": "The New York Times"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://thenextweb.com&size=70..120..200",
+      "name": "The Next Web"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.thesportbible.com&size=70..120..200",
+      "name": "The Sport Bible"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.telegraph.co.uk&size=70..120..200",
+      "name": "The Telegraph"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://timesofindia.indiatimes.com&size=70..120..200",
+      "name": "The Times of India"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.theverge.com&size=70..120..200",
+      "name": "The Verge"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.wsj.com&size=70..120..200",
+      "name": "The Wall Street Journal"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.washingtonpost.com&size=70..120..200",
+      "name": "The Washington Post"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.washingtontimes.com/&size=70..120..200",
+      "name": "The Washington Times"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://time.com&size=70..120..200",
+      "name": "Time"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.usatoday.com/news&size=70..120..200",
+      "name": "USA Today"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://news.vice.com&size=70..120..200",
+      "name": "Vice News"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.wired.com&size=70..120..200",
+      "name": "Wired"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=https://www.wired.de&size=70..120..200",
+      "name": "Wired.de"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.wiwo.de&size=70..120..200",
+      "name": "Wirtschafts Woche"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://xinhuanet.com/&size=70..120..200",
+      "name": "Xinhua Net"
+    },
+    {
+      "icon": "https://icon-locator.herokuapp.com/icon?url=http://www.ynet.co.il&size=70..120..200",
+      "name": "Ynet"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+// Outermost App Padding
+$appPaddingX:      #{map-get(map-get($appPadding, x), base)}px;
+$appPaddingXLarge: #{map-get(map-get($appPadding, x), large)}px;
+$appPaddingY:      #{map-get(map-get($appPadding, y), base)}px;
+$appPaddingYLarge: #{map-get(map-get($appPadding, y), large)}px;
+
+// Base breakpoints
+$base:       #{map-get($viewport, base)}px;
+$xSmall:     #{map-get($viewport, xSmall)}px;
+$small:      #{map-get($viewport, small)}px;
+$medium:     #{map-get($viewport, medium)}px;
+$large:      #{map-get($viewport, large)}px;
+$xLarge:     #{map-get($viewport, xLarge)}px;
+$xxLarge:    #{map-get($viewport, xxLarge)}px;
+$xxxLarge:   #{map-get($viewport, xxxLarge)}px;
+$xxxxLarge:  #{map-get($viewport, xxxxLarge)}px;
+$xxxxxLarge: #{map-get($viewport, xxxxxLarge)}px;
+
+// Helper Sizes
+$full: #{map-get($size, full)}#{'%'};
+$half: #{map-get($size, half)}#{'%'};
+
+// Header Height
+$headerHeight:      #{map-get($header, base)}px;
+$headerHeightLarge: #{map-get($header, large)}px;
+
+// Article Item Sizes
+$itemDescriptionHeight: #{map-get($item, descriptionHeight)}px;
+$itemHeight: #{map-get($item, height)}px;
+$itemSpacing: #{map-get($item, spacing)}px;
+$itemWidth:  #{map-get($item, width)}px;
+
+// Search Container offsetWidths
+$searchInputOffset:      #{map-get(map-get($search, inputOffset), base)}px;
+$searchInputOffsetLarge: #{map-get(map-get($search, inputOffset), large)}px;
+
+// Default click target size, Apple HIG recommends a minimum of 44px.
+$targetDefault:   #{map-get($clickTargetSize, default)}px;
+$targetSize:      #{map-get($clickTargetSize, base)}px;
+$targetSizeLarge: #{map-get($clickTargetSize, large)}px;
+
+// Content Well
+$wellWidth:      #{map-get($well, base)}#{'%'};
+$wellWidthLarge: #{map-get($well, large)}#{'%'};
