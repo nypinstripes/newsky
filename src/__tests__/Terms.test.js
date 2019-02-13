@@ -1,11 +1,11 @@
 import { create } from 'react-test-renderer';
 import App from '../components/App';
-import News from '../components/News/News';
 import React from 'react';
 import ServerRouter, { withRouter } from 'react-router-dom';
+import Terms from '../components/Docs/Terms';
 
 test('snapshot', () => {
-  const favoritesComponent = create(withRouter(<News />));
+  const termsComponent = create(withRouter(<Terms />));
 
-  expect(favoritesComponent.toJSON()).toMatchSnapshot();
+  expect(termsComponent.toJSON()).toMatchSnapshot();
 });

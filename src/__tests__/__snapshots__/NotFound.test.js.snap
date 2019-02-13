@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<div
+  aria-errormessage={true}
+  className="not-found page-root"
+  role="region"
+>
+  <h1
+    role="heading"
+  >
+    Zoink!
+  </h1>
+  <div
+    className="not-found-icon"
+    role="presentation"
+  >
+    <div
+      className="icon-news"
+    >
+      <svg
+        height="0"
+        role="presentation"
+        width="0"
+      >
+        <use
+          x="0"
+          xlinkHref="#icon-news-paper-img"
+          y="0"
+        />
+      </svg>
+      <svg
+        height="0"
+        role="presentation"
+        width="0"
+      >
+        <use
+          x="0"
+          xlinkHref="#icon-news-paper"
+          y="0"
+        />
+      </svg>
+      <svg
+        height="0"
+        role="presentation"
+        width="0"
+      >
+        <use
+          x="0"
+          xlinkHref="#icon-news-paper-text"
+          y="0"
+        />
+      </svg>
+    </div>
+  </div>
+  <p
+    role="note"
+  >
+    Didn't find that one.
+  </p>
+</div>
+`;
