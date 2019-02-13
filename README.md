@@ -3,7 +3,7 @@
 </h1>
 
 <h2 align="center">
-  <img src="https://cl.ly/952b487d88bc/%255Bdffb4eec7881b75be076decd4f9ad9d5%255D_newsky-subtitle.png" alt="Newsky Tagline" />
+  <img src="https://cl.ly/b7e6ec845ebe/md-subtitle.png" alt="Newsky Tagline" />
 </h2>
 
 
@@ -195,62 +195,81 @@ _Snapshots are generated using the jest testing library, at present there are on
 
 <h2></h2>
 
+
 <a name="pages-&-previews"></a>
 ## Pages & Previews
 
+
 ### Newsky Search
 
+
 <p align="center">
-  <img width="100%" valign="top" src="https://cl.ly/602b1257d75f/Screen%252520Recording%2525202019-02-13%252520at%25252002.59%252520AM.gif" alt="preview" />
+  <img width="100%" valign="top" src="https://cl.ly/33963e12d396/newsky-preview.gif" alt="preview" />
 </p>
 
+
 #### &nbsp;&nbsp;&nbsp;404
+
 
 <p align="left">
   <img width="100%" valign="top" src="https://cl.ly/ab35f982af9c/not-found-large.png" alt="404" />
 </p>
 
+
 #### &nbsp;&nbsp;&nbsp;Landing
 
+
 <p align="left">
-  <img width="22%" valign="top" src="https://cl.ly/04f758663742/landing-mobile.png" />
+  <img width="27%" valign="top" src="https://cl.ly/04f758663742/landing-mobile.png" />
   <img width="72%" valign="top" src="https://cl.ly/438d300db18b/landing-large.png" />
 </p>
 
+
 #### &nbsp;&nbsp;&nbsp;Search Results
 
+<h4><strong>Note:</strong> Searches submit as you type, there's a 6 second debounce delay as not to make too many network requests.</h4>
+
 <p align="left">
-  <img width="22%" valign="top" src="https://cl.ly/6c75de89bcd2/results-mobile.png" />
+  <img width="27%" valign="top" src="https://cl.ly/6c75de89bcd2/results-mobile.png" />
   <img width="72%" valign="top" src="https://cl.ly/bbb55a37a39f/results-large.png" />
 </p>
+
 
 <p align="left">
   <img width="100%" valign="top" src="https://cl.ly/48528c15fe29/%255Be74efcb3751b7a884efb571fb274f1ab%255D_results-large-2.png" />
 </p>
 
+
 <p align="left">
   <img width="100%" valign="top" src="https://cl.ly/5b6234f33c88/results-xlarge.png" />
 </p>
 
+
 <p align="left">
-  <img width="22%" valign="top" src="https://cl.ly/8b1746e9c05c/%255B7f18e73cfcf895df089e7153d782c651%255D_no-results-mobile.png" />
+  <img width="27%" valign="top" src="https://cl.ly/8b1746e9c05c/%255B7f18e73cfcf895df089e7153d782c651%255D_no-results-mobile.png" />
   <img width="72%" valign="top" src="https://cl.ly/36dd88474d09/no-results-large.png" />
 </p>
 
+
 #### &nbsp;&nbsp;&nbsp;Article Detail Overlay
 
+
 <p align="left">
-  <img width="22%" valign="top" src="https://cl.ly/fd13256809b1/overlay-mobile.png" />
+  <img width="27%" valign="top" src="https://cl.ly/fd13256809b1/overlay-mobile.png" />
   <img width="72%" valign="top" src="https://cl.ly/0867739e45db/overlay-large.png" />
 </p>
 
+
 #### &nbsp;&nbsp;&nbsp;Unsupported Browsers
+
 
 <p align="left">
   <img width="100%" valign="top" src="https://cl.ly/69a0661cf0f3/unsupported-large.png" alt="unsupported" />
 </p>
 
+
 ##### (Filler) Docs Pages
+
 
 - (Open) License
 
@@ -258,11 +277,13 @@ _Snapshots are generated using the jest testing library, at present there are on
   <img width="100%" valign="top" src="https://cl.ly/1d438016b415/license.png" alt="license" />
 </p>
 
+
 - (faux) Privacy
 
 <p align="left">
   <img width="100%" valign="top" src="https://cl.ly/5a10590eacb1/privacy.png" alt="privacy" />
 </p>
+
 
 - (faux) Terms/Conditions
 
