@@ -1,0 +1,65 @@
+.button {
+  backface-visibility: hidden;
+  border-color: argb();
+  border-radius: 3px;
+  border-width: 0;
+  box-shadow: 0 0 0 1px argb();
+  background-color: $nightRider;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  height: $targetSize; // Apple HIG recommends >= 44px
+  outline: 0;
+  padding: 0;
+  perspective: 900px;
+  position: relative;
+  text-align: center;
+  @include transitions(
+    $duration: #{100ms, 200ms},
+    $property: #{background-color, box-shadow},
+    $timing: ease-in-out
+  );
+  @include breakpoint($large) {
+    height: $targetSizeLarge;
+  }
+  &:hover {
+    @include breakpoint($large) {
+      box-shadow: 0 0 10px 0 $boulder;
+    }
+  }
+  &:focus {
+    box-shadow: 0 0 10px 0 $boulder;
+  }
+  &:active {
+    box-shadow: 0 0 10px -8px $boulder;
+  }
+  &::before {
+    transition: background-color 250ms ease-out 0s;
+  }
+  &[disabled], &[data-disabled='disabled'], &[data-disabled=true] {
+    background-color: rgba($mercury, 0.6);
+    border-color: $boulder;
+    box-shadow: 0 0 0 0 argb();
+    color: rgba(white, 0.75);
+    cursor: default;
+  }
+  &-row {
+    min-height: $targetSize;
+    @include float-row;
+    @include breakpoint($large) {
+      height: $targetSizeLarge;
+    }
+  }
+  &-text {
+    color: white;
+    cursor: pointer;
+    height: 11px;
+    margin-top: 1px;
+    padding: 0 12px;
+    text-shadow: 0 0 0 argb();
+    transition: color 150ms ease-in 0s;
+    white-space: nowrap;
+    @include center-xy;
+    @include font-mass(0.875rem, 0.5rem);
+  }
+}

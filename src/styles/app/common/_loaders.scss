@@ -1,0 +1,181 @@
+.loader {
+  @include center-x;
+  &-bottom {
+    height: 23.81%;
+    top: 76.19%;
+    > span {
+      height: 20%;
+      &:nth-child(1) {
+        top: 0;
+        width: 92%;
+        > span {
+          &:nth-child(1) {
+            animation-delay: 3600ms;
+            left: 25%;
+          }
+          &:nth-child(2) {
+            animation-delay: 4s;
+            left: 75%;
+          }
+        }
+      }
+      &:nth-child(2) {
+        top: 40%;
+        width: 100%;
+        > span {
+          animation-delay: 2400ms;
+          left: 40%;
+        }
+      }
+      &:nth-child(3) {
+        top: 80%;
+        width: 50%;
+        > span {
+          animation-delay: 3s;
+          left: 10%;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &-center {
+    height: 42.857%;
+    top: 26.19%;
+    &-left {
+      backface-visibility: hidden;
+      &-bg {
+        backface-visibility: hidden;
+        background-image: linear-gradient(
+          45deg,
+          $nero 22.73%,
+          argb() 22.73%,
+          argb() 50%,
+          $nero 50%,
+          $nero 72.73%,
+          argb() 72.73%,
+          argb() 100%
+        );
+        background-size: 15.56px 15.56px;
+        will-chage: transform;
+        z-index: -1;
+        @include animations(
+          $count: 3,
+          $delay: -2s,
+          $direction: both,
+          $duration: 2100ms,
+          $name: periodicalStripe,
+          $timing: linear
+        );
+        @include position(absolute, 0 0 0 -112px);
+      }
+      margin-right: 6.66%;
+      overflow: hidden;
+      width: 42.22%;
+    }
+    &-right {
+      width: 51.12%;
+      > span {
+        height: 11.3425%;
+        &:nth-child(1), &:nth-child(4) {
+          width: 100%;
+        }
+        &:nth-child(2), &:nth-child(5) {
+          width: 63%;
+        }
+        &:nth-child(1) {
+          top: 0;
+          > span {
+            animation-delay: 1800ms;
+            left: 78%;
+          }
+        }
+        &:nth-child(2) {
+          top: 21.99%;
+        }
+        &:nth-child(3) {
+          top: 44.44%;
+          width: 85%;
+        }
+        &:nth-child(4) {
+          top: 66.66%;
+          > span {
+            &:nth-child(1) {
+              animation-delay: 1200ms;
+              left: 20%;
+            }
+            &:nth-child(2) {
+              animation-delay: 600ms;
+              left: 70%;
+            }
+          }
+        }
+        &:nth-child(5) {
+          top: 88.88%;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    > div {
+      height: 100%;
+      position: relative;
+      @include float-box;
+    }
+  }
+  &-top {
+    height: 19.047%;
+    top: 0;
+    > span {
+      height: 37.5%;
+      &:nth-child(1) {
+        top: 0;
+        width: 100%;
+        > span {
+          animation-delay: 600ms;
+          left: 70%;
+        }
+      }
+      &:nth-child(2) {
+        top: 62.5%;
+        width: 75%;
+        > span {
+          animation-delay: 0s;
+          left: 50%;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  > div, span {
+    @include position(absolute, null null null 0);
+  }
+  > div {
+    @include float-row;
+  }
+  span {
+    background-color: $nero;
+    @include float-box;
+    > span {
+      background-color: $alizarinCrimson;
+      opacity: 0;
+      will-chage: opacity;
+      @include animations(
+        $count: 1,
+        $fill: both,
+        $duration: 600ms,
+        $name: fadeIn
+      );
+      @include float-box;
+      @include position(absolute, 0 null 0 null);
+      @include size(20px 100%);
+      @include breakpoint($medium) {
+        width: 38px;
+      }
+    }
+  }
+}

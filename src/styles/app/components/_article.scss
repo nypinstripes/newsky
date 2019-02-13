@@ -1,0 +1,104 @@
+.article {
+  backface-visibility: hidden;
+  height: calc(#{$full} * 1.1670001);
+  margin-bottom: 20px;
+  max-width: $itemWidth;
+  max-height: calc(#{$itemWidth} * 1.1670001);
+  min-height: calc(#{$full} / (16 / 9) + 200px);
+  outline: none;
+  overflow: hidden;
+  transition: margin 80ms linear 0s;
+  width: $full;
+  @include center-x;
+  @include breakpoint($large) {
+    clear: none;
+    left: auto;
+    height: $itemHeight;
+    margin: 0 8.5px 20px 8.5px;
+    transform: translateX(0);
+    width: $itemWidth;
+  }
+  &-overlay {
+    &-img {
+      display: block;
+      height: $full;
+      @include backgrounds($size: contain);
+    }
+    .button {
+      float: left;
+      &-row {
+        margin-top: 18px;
+      }
+    }
+  }
+  &-published {
+    color: $boulder;
+    right: 0;
+    @include center-y(absolute);
+    @include font-mass(0.875rem, 0.75rem);
+  }
+  &-source {
+    border-radius: 3px;
+    height: $targetSize;
+    outline: 0;
+    width: $targetSize;
+    z-index: 3;
+    @include position(absolute, 10px 10px null null);
+    @include backgrounds($size: contain);
+    @include float-box(right);
+    @include breakpoint($large) {
+      height: $targetSizeLarge;
+      right: 14px;
+      top: 14px;
+      width: $targetSizeLarge;
+    }
+  }
+  &-title, p {
+    clear: both;
+    color: $nero;
+    text-align: left;
+    @include float-box;
+  }
+  &-title {
+    position: relative;
+    transition: color 150ms ease 0s;
+    @include ellipsis;
+    @include font-mass(1.1rem, 1.2rem, 700)
+    @include hz-underline($alizarinCrimson);
+    &::before {
+      bottom: 0;
+    }
+    &:hover {
+      color: $alizarinCrimson;
+      &::before {
+        @include breakpoint($large) {
+          background-color: $alizarinCrimson;
+        }
+      }
+    }
+    &:focus {
+      color: $alizarinCrimson;
+      &::before {
+        background-color: $alizarinCrimson;
+      }
+    }
+  }
+  p {
+    height: $itemDescriptionHeight;
+    margin: 10px 0 20px 0;
+    max-width: $full;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+    white-space: normal;
+    @include font-mass(0.9375rem, 1.15rem);
+    @include breakpoint($large) {
+      margin: 20px 0 27px 0;
+      @include font-mass($lineHeight: 1.15rem);
+    }
+    > span {
+      @include float-row;
+    }
+  }
+}

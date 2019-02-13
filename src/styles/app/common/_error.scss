@@ -1,0 +1,53 @@
+.not-found {
+  padding-top: 60px;
+  width: $full;
+  @include center-x;
+  @include breakpoint($medium) {
+    margin-top: 20px;
+    width: 668px;
+  }
+  &-icon, h1, p {
+    @include center-x;
+  }
+  &-icon {
+    margin-top: 18px;
+    @include size(268px);
+    @include breakpoint($medium) {
+      margin-top: 0;
+      @include size(400px);
+    }
+    .icon-news {
+      @include float-box;
+      @include size(100%);
+      svg {
+        @include position(absolute, 0);
+        &:nth-child(1) {
+          z-index: 1;
+          use {
+            fill: $alizarinCrimson;
+          }
+        }
+        &:nth-child(2) {
+          z-index: 2;
+          use {
+            fill: $silver;
+          }
+        }
+        &:nth-child(3) {
+          z-index: 3;
+          use {
+            fill: $boulder;
+          }
+        }
+      }
+    }
+  }
+  h1 {
+    @include font-mass($size: 1.5rem, $weight: 700);
+  }
+  p {
+    color: $nightRider;
+    margin-top: 18px;
+    @include font-mass(1.35rem, 1.1rem);
+  }
+}

@@ -1,0 +1,23 @@
+.banner {
+  background-color: $alizarinCrimson;
+  z-index: 999;
+  @include animations($duration: 300ms, $name: bannerDown);
+  @include position(fixed, 0 0 null 0);
+  @include float-box;
+  @include size(100% 36px);
+  @include breakpoint($large) {
+    @include animations($duration: 300ms, $name: bannerDownLarge);
+  }
+  &-container {
+    @include center-x;
+    @include size(calc(#{$full} - #{$appPaddingX} * 2) 100%);
+    @include breakpoint($large) {
+      width: calc(#{$full} - #{$appPaddingXLarge} * 2);
+    }
+  }
+  h4 {
+    color: white;
+    @include center-xy;
+    @include font-mass($lineHeight: 0.8rem);
+  }
+}

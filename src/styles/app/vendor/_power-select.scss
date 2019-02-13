@@ -1,0 +1,141 @@
+.PowerSelect {
+  background-color: argb();
+  border-color: argb();
+  border-width: 0;
+  border-radius: 3px;
+  text-align: left;
+  @include size(100%);
+  &.PowerSelect--open {
+    &.tether-target-attached-bottom {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+  &__Clear {
+    padding: 4px 10px;
+    @include hard-hide;
+    &::before {
+      @include breakpoint($medium) {
+        margin-top: -1px;
+        @include center-xy(absolute);
+        @include font-mass($lineHeight: 0.5rem);
+        @include size(10px);
+      }
+    }
+  }
+  &--focused {
+    .PowerSelect__TriggerStatus {
+      &::before {
+        border-top-color: $boulder;
+      }
+    }
+  }
+  &--open {
+    .PowerSelect__TriggerStatus {
+      &::before {
+        border-top-color: $alizarinCrimson;
+      }
+    }
+  }
+  &__Menu {
+    background-color: $nero;
+    border-color: argb();
+    border-width: 0;
+    padding-bottom: 8px;
+  }
+  &__Option {
+    height: $targetDefault;
+    outline: 0;
+    padding: 0 0 0 12px;
+    position: relative;
+    @include breakpoint($medium) {
+      padding: 0 14px;
+    }
+    &:not(.PowerSelect__Option--disabled) {
+      &:hover {
+        @include breakpoint($base) {
+          background-color: argb();
+        }
+        > span {
+          @include breakpoint($large) {
+            color: $alizarinCrimson;
+          }
+        }
+      }
+      &:focus, &:active {
+        background-color: argb();
+      }
+      &:focus {
+        > span {
+          color: $alizarinCrimson;
+        }
+      }
+      &:active {
+        > span {
+          color: $alto;
+        }
+      }
+    }
+    &.PowerSelect__Option--highlighted {
+      background-color: argb();
+      > span {
+        color: $alizarinCrimson;
+      }
+    }
+    > span {
+      color: white;
+      height: 12px;
+      transition: color 125ms ease-in 0s;
+      @include center-y;
+      @include font-mass(0.875rem, 0.75rem, 400);
+    }
+  }
+  &__Placeholder {
+    display: inline-block;
+  }
+  &__Tether {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-top: -1px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: 200;
+    @include animations($name: fadeIn);
+  }
+  &__Trigger {
+    display: table;
+    height: $full;
+    > * {
+      height: $full;
+    }
+  }
+  &__TriggerInput {
+    border-radius: 0;
+    box-sizing: border-box;
+    color: $nero;
+    height: $full;
+    @include breakpoint($medium) {
+      padding-right: 24px;
+    }
+  }
+  &__TriggerInputContainer {
+    @include breakpoint($medium) {
+      height: $full;
+      width: calc(#{$full} - 24px);
+      @include float-box;
+    }
+  }
+  &__TriggerStatus {
+    padding: 1px 9px 0 5px;
+    @include breakpoint($large) {
+      padding: 1px 12px 0 10px;
+    }
+  }
+}
+
+// tether-element
+// tether-enabled
+// tether-element-attached-top
+// tether-element-attached-left
+// tether-target-attached-bottom
+// tether-target-attached-left

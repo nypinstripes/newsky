@@ -1,0 +1,242 @@
+.overlay {
+  background-color: argb();
+  color: white;
+  opacity: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 10000;
+  -webkit-overflow-scrolling: touch;
+  @include position(fixed, 0 0 null 0);
+  @include size(100%);
+  &.concealed {
+    opacity: 0;
+    visibility: visible;
+  }
+  &.revealed {
+    background-color: rgba(black, 0.95);
+    display: block;
+    opacity: 0;
+    @include animations($duration: 150ms, $name: fadeIn, $timing: ease);
+  }
+  &-clear {
+    right: 8px;
+    top: 5px;
+    @include clear-button($activeColor: $alizarinCrimson);
+    @include breakpoint($large) {
+      right: 20px;
+      top: 15px;
+    }
+    .overlay-locked & {
+      display: none;
+    }
+  }
+  &-container {
+    min-width: 280px;
+    display: inline-block;
+    padding: 0;
+    transform: translateX(-$half) scale(1);
+    width: $full;
+    z-index: 2;
+    @include position(absolute, -100px null null 50%);
+    @include soft-hide;
+    @include transitions(
+      $delay: #{200ms, 300ms, 300ms},
+      $duration: #{200ms, 200ms, 100ms},
+      $property: #{visibility, opacity, top},
+      $timing: linear
+    );
+  }
+  &-content {
+    padding-bottom: 400px;
+    width: $full;
+    @include center-x;
+    &-body {
+      clear: both;
+      max-height: calc(100vw / (16 / 9));
+      position: relative;
+      width: 100vw;
+      @include float-box;
+      &-container {
+        max-height: calc(100vh / (16 / 9));
+        overflow: hidden;
+        top: 0;
+        @include center-x(absolute);
+        @include size(100%);
+      }
+      &-content {
+        background-color: rgba($nero, 0.9);
+        height: calc(100vw / (16 / 9));
+        max-height: $medium;
+        top: 0;
+        @include float-row;
+        @include breakpoint($large) {
+          height: calc(100vw / (16 / 9));
+        }
+        @include breakpoint($xLarge) {
+          max-height: 700px; // Remove For Videos
+        }
+      }
+    }
+  }
+  &-details {
+    padding: 0 2.5%;
+    width: $full;
+    @include center-x;
+    @include breakpoint($large) {
+      width: calc(145% / (16 / 9));
+    }
+    @include breakpoint($xxxLarge) {
+      max-width: 1075px;
+    }
+    &-container {
+      display: table;
+      margin-top: 18px;
+      min-height: 80px;
+      padding-left: 100px;
+      position: relative;
+      @include float-row;
+    }
+  }
+  &-icon {
+    border-radius: 40px;
+    overflow: hidden;
+    z-index: 2;
+    @include backgrounds($size: contain);
+    @include float-box;
+    @include position(absolute, 0 null null 0);
+    @include size(80px);
+    &:hover {
+      & ~ .overlay-info {
+        .overlay-title {
+          &::before {
+            @include breakpoint($large) {
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
+    &:focus, &:active {
+      & ~ .overlay-info {
+        .overlay-title {
+          &::before {
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+  &-info {
+    clear: both;
+    display: table-cell;
+    width: $full;
+    vertical-align: middle;
+    &-attribution {
+      margin-top: 6px;
+      h4, span {
+        color: lighten($gallery, 10%);
+        display: inline;
+        text-align: left;
+        @include font-mass(0.8rem, 1rem, 300);
+      }
+      > span {
+        clear: both;
+        margin-top: 4px;
+        @include float-box;
+        &:first-child {
+          margin-top: 0;
+        }
+        > span {
+          color: darken($alto, 10%);
+        }
+      }
+    }
+    > * {
+      clear: both;
+      @include float-box;
+    }
+  }
+  &-title {
+    color: white;
+    left: 0;
+    margin-top: 0;
+    max-width: 96%;
+    outline: 0;
+    overflow: visible;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: normal;
+    @include float-box;
+    @include font-mass(1rem, 1.5rem, 700);
+    @include hz-underline(white);
+    @include position(null null null 0);
+    @include breakpoint($large) {
+      font-size: 1.15rem;
+    }
+  }
+  p {
+    color: white;
+    margin-top: 10px;
+    text-align: left;
+    word-wrap: normal;
+    @include font-mass(1rem, 1.35rem);
+    @include float-row;
+    @include breakpoint($large) {
+      margin-top: 18px;
+    }
+  }
+  .field {
+    &-label, &-value {
+      clear: none;
+      min-height: 15px;
+      position: relative;
+      top: 0;
+      transform: translateY(0);
+      @include float-box;
+      @include font-mass(0.9rem, 1.15rem, 300);
+    }
+    &-label {
+      left: 0;
+      min-width: 65px;
+      padding-right: 12px;
+      text-align: right;
+      &#item-tags {
+        & + .field-value {
+          > * {
+            color: $boulder;
+            position: relative;
+            @include float-box;
+          }
+          > a {
+            color: $alizarinCrimson;
+            margin-left: 5px;
+            @include hz-underline(white);
+            &:first-child {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    &-value {
+      margin-top: 0;
+      text-align: left;
+      > span {
+        color: $boulder;
+      }
+    }
+
+  }
+  .form-row {
+    margin-top: 10px;
+    width: $full;
+  }
+  .overlay-container {
+    top: 50px;
+    @include soft-show;
+    @include breakpoint($medium) {
+      top: 60px;
+    }
+  }
+}

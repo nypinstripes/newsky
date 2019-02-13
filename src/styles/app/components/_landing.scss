@@ -1,0 +1,41 @@
+.landing {
+  &.page-root {
+    padding-top: 40px;
+    @include breakpoint($medium) {
+      padding-top: 70px;
+      @include size(668px 400px);
+    }
+  }
+  .periodical {
+    position: relative;
+    .loader {
+      @include size(265px 247px);
+      @include breakpoint($medium) {
+        @include size(400px 373px);
+      }
+    }
+    &-text {
+      margin-top: 35px;
+      h1 {
+        margin-bottom: 16px;
+        @include font-mass(1.5rem, 1.1rem, 700);
+        @include breakpoint($large) {
+          margin-bottom: 18px;
+          @include font-mass(1.65rem, 1.3rem, 700);
+        }
+        > span {
+          color: $alizarinCrimson;
+        }
+      }
+      h2 {
+        color: $boulder;
+        @include breakpoint($large) {
+          font-size: 1.125rem;
+        }
+      }
+      > * {
+        @include float-row;
+      }
+    }
+  }
+}

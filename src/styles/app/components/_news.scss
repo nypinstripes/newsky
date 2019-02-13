@@ -1,0 +1,23 @@
+.news {
+  &.page-root {
+    padding-top: 0;
+    @include breakpoint($large) {
+      width: calc(91.5% + #{$itemSpacing});
+    }
+    @include breakpoint($xLarge) {
+      width: calc(91.5% + #{$itemSpacing} * 2);
+    }
+    @include breakpoint($xxLarge) {
+      width: calc(#{$xxLarge} - 30px);
+    }
+    @include breakpoint($xxxLarge) {
+      width: calc(#{$xxxLarge} - 30px);
+    }
+  }
+  .button {
+    @include float-box;
+    &-row {
+      position: relative;
+    }
+  }
+}

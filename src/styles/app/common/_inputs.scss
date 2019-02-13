@@ -1,0 +1,42 @@
+input {
+  &[type='text'] {
+    outline: none;
+    padding: 0 0 1px 10px;
+    text-shadow: 0 0 0 argb();
+    @include backgrounds;
+    @include float-box;
+    @include font-mass(0.875rem, 0.75rem);
+    @include moz-placeholder(3.85rem);
+    @include text-input-placeholder {
+      color: $silver;
+      margin-bottom: 0;
+      @include font-mass(0.875rem, 0.75rem);
+      @include transitions($property: color);
+    }
+    @include transitions($property: color);
+    @include breakpoint($large) {
+      padding-left: 15px;
+    }
+    &[disabled] {
+      background-color: gainsboro;
+      color: rgba($gallery, 0.8);
+      @include text-input-placeholder {
+        color: rgba($gallery, 0.8);
+      }
+    }
+    &:-webkit-autofill {
+      box-shadow: inset 0 0 0 100px $nero;
+      color: white;
+      @include backgrounds($color: $nero, $repeat: repeat, $size: cover);
+      @include transitions($duration: 5s, $property: box-shadow);
+    }
+    &.inline-input {
+      background-color: argb();
+    }
+    &.locked {
+      background: rgba($gallery, 0.8);
+      box-shadow: inset 0 0 0 0 argb();
+      color: argb(0.5);
+    }
+  }
+}

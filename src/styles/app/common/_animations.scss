@@ -1,0 +1,127 @@
+@keyframes ballBounce {
+  0%, 10% {
+    bottom: 50%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes bannerDown {
+  100% {
+    transform: translateY($headerHeight);
+  }
+}
+
+@keyframes bannerDownLarge {
+  100% {
+    transform: translateY($headerHeightLarge);
+  }
+}
+
+@keyframes ballSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes borderShift {
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes explode {
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes horizontalReset {
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes pebbleMotion {
+  0% {
+    right: -20%;
+  }
+  100% {
+    right: 110%;
+  }
+}
+
+@keyframes periodicalStripe {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(112px);
+  }
+}
+
+@keyframes scaleIn {
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes strokeDash {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes strokeArray {
+  100% {
+    stroke-dasharray: 0;
+  }
+}
+
+@keyframes strokeOpacity {
+  100% {
+    stroke-width: 0;
+  }
+}
+
+@keyframes verticalShiftIn {
+  45% {
+    transform: translateY(-100%);
+  }
+  50%, 100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes verticalShiftOut {
+  45% {
+    transform: translateY(0);
+  }
+  50%, 100% {
+    transform: translateY(-100%);
+  }
+}

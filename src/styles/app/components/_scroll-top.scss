@@ -1,0 +1,93 @@
+.scroll-top-button {
+  background-color: rgba($nero, 0.85);
+  border-radius: 6px;
+  min-height: 30px;
+  min-width: 30px;
+  opacity: 0;
+  outline: 0;
+  padding: 0;
+  z-index: 1000;
+  @include size(40px);
+  @include position(fixed, null 18px 18px null);
+  @include transitions(
+    $duration: 180ms,
+    $property: #{background-color, box-shadow, opacity, transform}
+  );
+  @include breakpoint($large) {
+    background-color: rgba($nero, 0.65);
+  }
+  &:hover {
+    @include breakpoint($large) {
+      background-color: rgba($nero, 1);
+    }
+    div[class*='icon-arrow'] {
+      use {
+        @include breakpoint($large) {
+          @include animations($duration: 350ms, $name: strokeDash);
+        }
+        &.icon-arrow {
+          &-center {
+            @include breakpoint($large) {
+              stroke-dasharray: 90, 90;
+              stroke-dashoffset: 89;
+            }
+          }
+          &-left, &-right {
+            @include breakpoint($large) {
+              animation-delay: 200ms;
+              stroke-dasharray: 50, 50;
+              stroke-dashoffset: 49;
+            }
+          }
+        }
+      }
+    }
+  }
+  &:focus, &:active {
+    background-color: white;
+    box-shadow: inset 0 0 0 1px $nero;
+    use {
+      stroke: $nero;
+    }
+  }
+  &.active {
+    opacity: 1;
+  }
+  &.footer-offset {
+    transform: translateY(-32px);
+    @include size(30px);
+    @include breakpoint($medium) {
+      transform: translateY(0);
+      @include size(40px);
+    }
+    .icon-arrow {
+      @include size(14px);
+      @include breakpoint($medium) {
+        @include size(24px);
+      }
+    }
+  }
+  div[class*='icon-arrow'] {
+    @include center-xy(absolute);
+    @include size(24px);
+    svg {
+      @include position(absolute, 0);
+      &:nth-child(1) {
+        z-index: 2;
+      }
+      &:nth-child(2) {
+        z-index: 3;
+      }
+      &:nth-child(3) {
+        z-index: 4;
+      }
+      use {
+        stroke: white;
+        stroke-width: 5px;
+        @include breakpoint($medium) {
+          stroke-width: 3px;
+        }
+      }
+    }
+  }
+}

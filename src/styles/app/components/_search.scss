@@ -1,0 +1,94 @@
+.search {
+  height: $headerHeight;
+  width: calc(#{$wellWidth} - (#{$appPaddingX} * 2));
+  @include center-x;
+  @include breakpoint($large) {
+    height: $headerHeightLarge;
+    max-width: $wellWidthLarge;
+  }
+  @include breakpoint($xLarge) {
+    max-width: calc(#{$xLarge} - #{$appPaddingXLarge});
+  }
+  @include breakpoint($xxLarge) {
+    max-width: calc(#{$xxLarge} - #{$appPaddingXLarge});
+  }
+  @include breakpoint($xxxLarge) {
+    max-width: calc(#{$xxxLarge} - #{$appPaddingXLarge});
+  }
+  > div {
+    @include center-y;
+  }
+  &-button, &-filter {
+    height: $targetSize;
+    @include breakpoint($large) {
+      height: $targetSizeLarge;
+    }
+  }
+  &-button {
+    background-color: $alizarinCrimson;
+    margin-left: 9px;
+    width: 58px;
+    @include breakpoint($large) {
+      width: 147px;
+      margin-left: 13px;
+    }
+    &:focus, &:active {
+      .button-text {
+        color: $alto;
+      }
+    }
+  }
+  &-clear {
+    right: 0;
+    top: $half;
+    transform: translateY(-$half);
+    @include clear-button(
+      $activeColor: $alizarinCrimson,
+      $buttonHeight: $targetSize,
+      $buttonWidth: 34px,
+      $crossSize: 14px
+    );
+    @include breakpoint($large) {
+      height: $targetSizeLarge;
+    }
+  }
+  &-container {
+    height: $targetSize;
+    width: calc(#{$full} - #{$searchInputOffset});
+    @include breakpoint($large) {
+      height: $targetSizeLarge;
+      width: calc(#{$full} - #{$searchInputOffsetLarge});
+    }
+    input {
+      background-color: $nero;
+      border-radius: 3px;
+      color: white;
+      padding-right: 34px;
+      @include size(100%);
+    }
+  }
+  &-filter {
+    margin-left: 9px;
+    width: 100px;
+    @include breakpoint($large) {
+      width: 147px;
+    }
+    .PowerSelect {
+      background-color: $nero;
+      @include font-mass(0.875rem, 0.75rem, 300);
+      &__Placeholder {
+        color: white;
+        padding-left: 12px;
+      }
+      &__TriggerLabel {
+        padding: 0;
+        > span {
+          color: white;
+          &:not(.PowerSelect__Placeholder) {
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.docs {
+  display: inline-block;
+  text-align: left;
+  &.legal {
+    h3 {
+      left: $half;
+      margin: 20px 0 25px 0;
+      position: relative;
+      transform: translateX(-$half);
+      @include font-mass(1.25rem);
+      > span {
+        @include center-x;
+      }
+    }
+    p {
+      &:last-child {
+        font-weight: 400;
+      }
+    }
+  }
+  &.page-root {
+    padding-top: 35px;
+  }
+  &-container {
+    width: $full;
+    @include center-x;
+    @include breakpoint($large) {
+      max-width: calc(#{$large} - #{$appPaddingXLarge});
+    }
+    @include breakpoint($xLarge) {
+      max-width: $large;
+    }
+  }
+  h2 {
+    color: $alizarinCrimson;
+    margin-bottom: 20px;
+    @include center-x;
+    @include font-mass(1.65rem, 2rem, 700);
+    @include breakpoint($medium) {
+      line-height: 1.65rem;
+    }
+  }
+  h3, p, ol, ul, li {
+    clear: both;
+    @include float-box;
+  }
+  h3 {
+    margin-top: 40px;
+    @include font-mass(1.35rem, 1.35rem);
+  }
+  li, p, ol, ul {
+    margin-top: 20px;
+    text-align: left;
+    @include font-mass(1rem, 1.4rem, 300);
+  }
+  li {
+    display: list-item;
+    margin: 10px 0 0 20px;
+    width: calc(#{$full} - 20px);
+    &:first-child {
+      margin-top: 0;
+    }
+    > span {
+      float: left;
+    }
+  }
+  ol {
+    &[type='a'] {
+      > li {
+        list-style: lower-alpha outside;
+      }
+    }
+    &[type='i'] {
+      > li {
+        list-style: lower-roman outside;
+      }
+    }
+  }
+  p {
+    @include breakpoint($medium) {
+      text-align: justify;
+    }
+  }
+  ul {
+    li {
+      list-style: circle outside;
+    }
+  }
+  .hint {
+    color: $boulder;
+    margin-top: 12px;
+    @include font-mass($weight: 300);
+  }
+}

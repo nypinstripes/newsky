@@ -1,0 +1,16 @@
+svg {
+  use {
+    display: inline-block;
+  }
+}
+
+.svg-definitions {
+  @include soft-hide;
+  @include position(absolute, 0 null null 0);
+  @include size(0);
+  svg {
+    @include position(absolute, 0 null null 0);
+    @include size(0);
+  }
+}
+

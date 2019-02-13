@@ -1,0 +1,127 @@
+.list {
+  margin-bottom: 10px;
+  @include float-row;
+  &-grid {
+    width: calc(#{$full} - #{$appPaddingX} * 2);
+    @include center-x;
+    @include breakpoint($large) {
+      max-width: #{$full};
+    }
+    @include breakpoint($xLarge) {
+      max-width: none;
+    }
+    @include breakpoint($xxxxLarge) {
+      max-width: calc((#{$itemWidth} + #{$itemSpacing}) * 6);
+    }
+  }
+  &-head {
+    height: $targetDefault;
+    width: $full;
+    @include center-x;
+    @include breakpoint($large) {
+      max-width: 91.5vw;
+    }
+    @include breakpoint($xLarge) {
+      max-width: calc(#{$xLarge} - #{$appPaddingXLarge});
+    }
+    @include breakpoint($xxLarge) {
+      max-width: calc(#{$xxLarge} - #{$appPaddingXLarge});
+    }
+    @include breakpoint($xxxLarge) {
+      max-width: calc(#{$xxxLarge} - #{$appPaddingXLarge});
+    }
+  }
+  &-info {
+    color: $boulder;
+    max-width: $full;
+    text-align: left;
+    @include center-y;
+    @include ellipsis;
+    @include font-mass(0.875rem, 0.92rem);
+    span {
+      &:nth-child(1), &:nth-child(3) {
+        color: $nightRider;
+      }
+      &:nth-child(2) {
+        color: $alizarinCrimson;
+      }
+    }
+  }
+  &-item {
+    opacity: 0;
+    &.expanded {
+      @include animations(
+        $delay: 50ms,
+        $duration: 400ms,
+        $name: fadeIn,
+        $timing: linear
+      );
+    }
+    &-container {
+      background-color: rgba($nero, 0.65);
+      backface-visibility: hidden;
+      cursor: pointer;
+      height: auto;
+      overflow: hidden;
+      padding-top: calc(#{$full} / (16 / 9));
+      position: relative;
+      transition: opacity 100ms ease-in-out 0s;
+      z-index: 2;
+      @include float-row;
+      @include breakpoint($large) {
+        padding-top: calc(#{$full} / (16 / 9));
+      }
+    }
+    &-details {
+      background-color: white;
+      height: 51%;
+      padding: 8%;
+      @include float-row;
+      @include breakpoint($large) {
+        padding: 45px;
+      }
+    }
+    &-img {
+      backface-visibility: hidden;
+      z-index: 2;
+      @include position(absolute, 0);
+      @include size(100%);
+      &-bg {
+        opacity: 1;
+        top: 0;
+        z-index: 4;
+        @include backgrounds($size: cover);
+        @include center-x(absolute);
+        @include size(100%);
+      }
+    }
+    &-title {
+      bottom: 0;
+      top: auto;
+      z-index: 4;
+      @include center-x(absolute);
+      @include size(100% 50px);
+      .overlay & {
+        height: $targetDefault;
+        left: 0;
+        margin: 20px 0 0 0;
+        position: relative;
+        transform: translateX(0);
+        @include breakpoint($large) {
+          padding-left: 90px;
+        }
+      }
+      h5 {
+        cursor: pointer;
+        height: 17px;
+        @include center-xy;
+        @include ellipsis;
+        @include font-mass(0.9rem, 0.9rem, 300);
+        @include hz-underline(white);
+        &::before {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
