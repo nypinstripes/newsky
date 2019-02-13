@@ -75,7 +75,10 @@ class ArticleOverlay extends Component {
     } = this.props;
 
     if (icon === '') {
-      return <div className="overlay-icon not-available" role="presentation" />;
+      return <div className="overlay-icon not-available"
+        role="presentation"
+        title="Icon Not Avaialable"
+      />;
     }
 
     return (

@@ -125,6 +125,20 @@
         }
       }
     }
+    &.not-available {
+      border: edge($color: white, $size: 2);
+      overflow: visible;
+      &::before {
+        background-color: white;
+        content: '';
+        transform: translateX(-50%) rotate(45deg);
+        transform-origin: $half $half;
+        z-index: 2;
+        @include float-box;
+        @include position(absolute, 0 null null 50%);
+        @include size(2px 100%);
+      }
+    }
   }
   &-info {
     clear: both;
