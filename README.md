@@ -201,7 +201,7 @@ _Snapshots are generated using the jest testing library, at present there are on
 ### Newsky Search
 
 <p align="center">
-  <img width="100%" valign="top" src="https://cl.ly/ed52c11e38a9/newsky-preview-3.gif" alt="preview" />
+  <img width="100%" valign="top" src="https://cl.ly/a86012465c30/newsky-preview-4.gif" alt="preview" />
 </p>
 
 <br />
