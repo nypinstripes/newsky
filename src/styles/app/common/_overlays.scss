@@ -70,7 +70,7 @@
         top: 0;
         @include float-row;
         @include breakpoint($large) {
-          height: calc(100vw / (16 / 9));
+          height: calc(100vh / (16 / 9));
         }
         @include breakpoint($xLarge) {
           max-height: 700px; // Remove For Videos

@@ -1,5 +1,5 @@
-input, use, .empty-msg > *, .nav-action, .not-found, .overlay,
-.periodical-text > *, .PowerSelect__Placeholder, .search-button,
+input, use, .docs-container > *, .empty-msg > *, .nav-action, .not-found,
+.overlay, .periodical-text > *, .PowerSelect__Placeholder, .search-button,
 .site-footer-link {
   display: none;
 }

@@ -9,11 +9,15 @@ exports.isBrowserSupported = parser => {
   let browsers = agents.browsers.map(browser => browser.agents.join(' '));
   let user = name ? name.toLowerCase() : false;
   let social = agents.social.map(network => {
-    return network.agents.filter(agent => ua.indexOf(agent) !== -1);
-  });
-  let support = true;
+     let socialAgent = network.agents.filter(agent => ua.indexOf(agent) !== -1);
 
-  if (name && social.length === 0 && browsers.join(' ').indexOf(name) === -1) {
+     return socialAgent.length > 0 ? socialAgent.join(' ') : '';
+  });
+
+  let support = true;
+  social = social.join('');
+
+  if (user && social.length === 0 && browsers.join(' ').indexOf(user) === -1) {
     support = false;
   }
 
