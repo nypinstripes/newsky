@@ -1,0 +1,26 @@
++style
+  each font in typeface.fonts
+    |
+    | @font-face {
+    |   font-family: #{font.family};
+    |   font-style: #{font.style};
+    |   font-weight: #{font.weight};
+    |   src: #{font.src};
+    |   unicode-range: #{font.range}
+    | }
+    |
+
+  //- Front-load blocking font files.
+
+  |
+  | body {
+  |   font: #{typeface.body};
+  | }
+  |
+  | div.site-header {
+  |   font-weight: 300;
+  | }
+  |
+  | svg.svg-definitions {
+  |   font-weight: 700;
+  | }

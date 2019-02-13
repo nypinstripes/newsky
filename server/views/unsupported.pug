@@ -1,0 +1,17 @@
+extends layout.pug
+
+block content
+  div#app-container
+    include includes/_header.pug
+
+    div.page-root
+      h2 Unsupported Browser
+      h3
+        | You're using a web browser we don't support yet.
+        <br />
+        | Please use one of these options to improve your experience.
+      section.browser-links
+        each browser in browsers
+          +link(browser.url, browser.name)(class='browser-link')
+            div.browser-link-image(class=browser.agents.join(' '), role='Img')
+            h4 #{browser.name}

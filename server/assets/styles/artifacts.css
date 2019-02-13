@@ -1,0 +1,4 @@
+input, use, .empty-msg > *, .nav-action, .not-found, .overlay,
+.PowerSelect__Placeholder, .search-button, .site-footer-link {
+  display: none;
+}

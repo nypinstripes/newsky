@@ -1,0 +1,19 @@
+.site-header {
+  background: $nightRider;
+  height: $headerHeight;
+  @include float-box;
+  @include position(fixed, 0 0 null 0);
+  @include breakpoint($medium) {
+    height: $headerHeightLarge;
+  }
+}
+
+div.site-header {
+  &::before {
+    content: '';
+  }
+}
+
+header.site-header {
+  z-index: 1000;
+}

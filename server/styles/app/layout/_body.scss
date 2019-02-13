@@ -1,0 +1,58 @@
+body {
+  background-color: $gallery;
+  color: $nero;
+  float: left;
+  overflow-x: hidden;
+  vertical-align: top;
+  width: $full;
+  -webkit-font-smoothing: auto;
+  @include no-spacing;
+  &.no-scroll {
+    overflow: hidden !important;
+  }
+}
+
+#app-container {
+  float: left;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: $headerHeight 0 0 0;
+  z-index: 2;
+  @include position(fixed, 0);
+  @include size(100vw 100%);
+  @include breakpoint($medium) {
+    padding-top: $headerHeightLarge;
+  }
+  .no-scroll & {
+    overflow: hidden;
+  }
+}
+
+.app {
+  @include float-row;
+  &-body {
+    margin-bottom: 10px;
+    min-height: calc(100vh - 300px);
+    position: relative;
+    @include float-row;
+    @include breakpoint($large) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.page-root {
+  padding: $appPaddingY 0 0 0;
+  width: calc(#{$full} - #{$appPaddingX} * 2);
+  @include center-x;
+  @include breakpoint($large) {
+    padding: $appPaddingYLarge 0 0 0;
+    width: calc(#{$full} - #{$appPaddingXLarge} * 2);
+  }
+  &.full-page {
+    padding: 0;
+  }
+  > section {
+    @include float-row;
+  }
+}
