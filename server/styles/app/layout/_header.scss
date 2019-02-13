@@ -3,7 +3,7 @@
   height: $headerHeight;
   @include float-box;
   @include position(fixed, 0 0 null 0);
-  @include breakpoint($medium) {
+  @include breakpoint($large) {
     height: $headerHeightLarge;
   }
 }
