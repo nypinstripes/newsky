@@ -6,7 +6,7 @@ const Legal = props => (
     <div className="docs-container" role="document">
       <h2 role="heading">(MIT) License</h2>
       <h3>
-        <span>Copyright 2019 News</span>
+        <span>Copyright 2019 Newsky</span>
         <span className="hint" role="note">(not a real corporation)</span>
       </h3>
       <p>

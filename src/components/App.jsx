@@ -181,13 +181,6 @@ class App extends Component {
               render={props => <Landing winW={winW} {...props} />}
             />
             <Route path="/legal" render={props => <Legal {...props} />} />
-            <Route path="/articles"
-              render={props => <News
-                toggleOverlay={this.toggleOverlay}
-                winW={winW}
-                {...props}
-              />}
-            />
             <Route path="/privacy" render={props => <Privacy {...props} />} />
             <Route path="/results"
               render={props => <News

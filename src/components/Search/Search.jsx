@@ -21,6 +21,7 @@ class Search extends Component {
     currentTerm: string,
     history: object,
     scrollOffset: number,
+    setArticles: func,
     setBanner: func,
     setCurrentSort: func,
     setCurrentTerm: func,
